@@ -1,0 +1,16 @@
+<h1>Material date picker range</h1>
+<p>
+  You can pass as placeholder in the way:
+</p>
+<p>
+   YYYY-MM-DD or DD/MM/YYYY or what do you want
+</p>
+<p> In manual entry, you can use '.' '-' or '/'' to separate year, month and day</p>
+<mat-form-field *ngIf="control" class="full-width" >
+  <mat-label>Select dates</mat-label>
+  <date-picker-range [formControl]="control" placeholder="DD/MM/YYYY"  ></date-picker-range>
+  <mat-error>required</mat-error>
+</mat-form-field>
+<pre>
+{{control.value|json}}
+</pre>
